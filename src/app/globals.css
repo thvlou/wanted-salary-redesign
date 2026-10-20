@@ -1,0 +1,39 @@
+html {
+  height: 100%;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* wds/global.css 가 Pretendard 와 리셋을 담당하고, 여기서는 흰 배경만 지정한다. */
+  background: var(--semantic-background-normal-normal, #ffffff);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*
+ * 모션 최소화 설정을 존중한다.
+ * WDS 내부 애니메이션(Accordion·Popover 등)까지 한 번에 덮기 위해 전역으로 둔다.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,14 @@
+allowBuilds:
+  esbuild: set this to true or false
+  sharp: true
+  unrs-resolver: true
+  workerd: set this to true or false
+ignoredBuiltDependencies:
+  - sharp
+  - unrs-resolver
+overrides:
+  "@wanteddev/wds": "file:../montage-web-main/packages/wds"
+  "@wanteddev/wds-icon": "file:../montage-web-main/packages/wds-icon"
+  "@wanteddev/wds-nextjs": "file:../montage-web-main/packages/wds-nextjs"
+  "@wanteddev/wds-engine": "file:../montage-web-main/packages/wds-engine"
+  "@wanteddev/wds-theme": "file:../montage-web-main/packages/wds-theme"

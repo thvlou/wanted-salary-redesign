@@ -1,0 +1,35 @@
+{
+  "name": "wanted-salary",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@emotion/cache": "11.14.0",
+    "@emotion/react": "11.14.0",
+    "@emotion/serialize": "1.3.3",
+    "@emotion/server": "11.11.0",
+    "@emotion/utils": "1.4.2",
+    "@wanteddev/wds": "file:../montage-web-main/packages/wds",
+    "@wanteddev/wds-engine": "file:../montage-web-main/packages/wds-engine",
+    "@wanteddev/wds-icon": "file:../montage-web-main/packages/wds-icon",
+    "@wanteddev/wds-nextjs": "file:../montage-web-main/packages/wds-nextjs",
+    "@wanteddev/wds-theme": "file:../montage-web-main/packages/wds-theme",
+    "next": "16.2.11",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.11",
+    "typescript": "^5",
+    "wrangler": "^4.151.1"
+  }
+}
