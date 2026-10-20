@@ -21,6 +21,7 @@ import {
   sectionSpacingStyle,
   softSurfaceStyle,
 } from "./shared.style";
+import { SPACING, px } from "@/styles/spacing";
 
 import type { CareerLevel, SalaryPoint } from "@/data/salary";
 
@@ -74,15 +75,19 @@ export function SalaryCompareSection({
         내 연봉과 비교해보세요
       </Typography>
 
-      <Box sx={[compareBodyStyle, { marginTop: "12px" }]}>
-        <FlexBox flexDirection="column" gap="8px" sx={compareChartColumnStyle}>
+      <Box sx={[compareBodyStyle, { marginTop: px(SPACING.titleToContent) }]}>
+        <FlexBox
+          flexDirection="column"
+          gap={px(SPACING.tight)}
+          sx={compareChartColumnStyle}
+        >
           <Typography as="h3" variant="headline2" weight="bold">
             내 연봉 위치
           </Typography>
           <Typography variant="body2" color="semantic.label.alternative">
             동일 직무·연차의 시장 연봉 분포에서 내 위치를 확인할 수 있어요.
           </Typography>
-          <Box sx={{ marginTop: "12px" }}>
+          <Box sx={{ marginTop: px(SPACING.group) }}>
             <SalaryDistributionChart
               point={point}
               selectedSalary={selectedSalary}
@@ -92,7 +97,11 @@ export function SalaryCompareSection({
           </Box>
         </FlexBox>
 
-        <FlexBox flexDirection="column" gap="14px" sx={compareInputColumnStyle}>
+        <FlexBox
+          flexDirection="column"
+          gap={px(SPACING.group)}
+          sx={compareInputColumnStyle}
+        >
           {/* 신입은 비교 기준이 될 현재 연봉이 없을 수 있어 시장 벤치마크를 먼저 보여준다. */}
           {newGrad && (
             <FlexBox flexDirection="column" gap="10px" sx={softSurfaceStyle}>

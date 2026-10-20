@@ -1,11 +1,12 @@
 import { css } from "@wanteddev/wds";
 
 import { PAGE_MAX_WIDTH, focusRingStyle } from "../salary/shared.style";
+import { SPACING, px } from "@/styles/spacing";
 
 import type { Theme } from "@wanteddev/wds";
 
 export const footerRootStyle = (theme: Theme) => css`
-  margin-top: 80px;
+  margin-top: ${px(SPACING.pageBottom)};
   border-top: 1px solid ${theme.semantic.line.solid.normal};
   background-color: ${theme.semantic.background.normal.alternative};
 `;

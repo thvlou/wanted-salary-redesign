@@ -69,8 +69,10 @@ export const navMenuItemStyle = (active: boolean) => (theme: Theme) => css`
 export const avatarStyle = (theme: Theme) => css`
   background-color: ${theme.semantic.label.normal};
   color: ${theme.semantic.static.white};
-  font-size: 10px;
+  /* 3글자가 small 아바타 원 안에 여백을 남기고 들어가는 크기. */
+  font-size: 9px;
   font-weight: 600;
+  letter-spacing: -0.3px;
 
   [data-role="avatar-fallback"] {
     display: none;

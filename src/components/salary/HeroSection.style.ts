@@ -1,9 +1,11 @@
 import { css } from "@wanteddev/wds";
 
+import { SPACING, px } from "@/styles/spacing";
+
 import type { Theme } from "@wanteddev/wds";
 
 export const heroTopSpacingStyle = css`
-  margin-top: 40px;
+  margin-top: ${px(SPACING.pageTop)};
 `;
 
 export const filterRowStyle = css`
@@ -30,10 +32,10 @@ export const heroGridStyle = css`
    * row-gap(32px) 그대로 유지된다. ("세전 연봉 기준"→trend 간격과 동일)
    */
   grid-template-rows: auto auto;
-  column-gap: 40px;
-  row-gap: 32px;
+  column-gap: ${px(SPACING.columnGutter)};
+  row-gap: ${px(SPACING.majorBlock)};
   align-items: start;
-  margin-top: 32px;
+  margin-top: ${px(SPACING.titleToContent)};
 
   /* WDS md 브레이크포인트(992px)와 맞춰 금액 타이포 단계와 함께 전환된다. */
   @media (max-width: 991px) {
@@ -93,7 +95,7 @@ export const heroTitleStyle = css`
  * 대신 "1억" 뒤 공백에서만 줄바꿈된다. keep-all 로 "1,000만원" 내부는 쪼개지지 않는다.
  */
 export const heroAmountStyle = css`
-  margin-top: 12px;
+  margin-top: ${px(SPACING.displayPair)};
   word-break: keep-all;
   /*
    * display1 의 기본 line-height(72px)는 56px 글자 대비 여백이 커서
@@ -108,14 +110,14 @@ export const heroAmountStyle = css`
 `;
 
 export const heroBaseNoteStyle = css`
-  margin-top: 8px;
+  margin-top: ${px(SPACING.tight)};
 `;
 
 /** 직전 연차 대비 정보. Hero 전체보다 낮은 위계의 neutral surface. */
 export const trendSurfaceStyle = (theme: Theme) => css`
   align-self: stretch;
-  margin-top: 32px;
-  padding: 16px;
+  margin-top: ${px(SPACING.majorBlock)};
+  padding: ${px(SPACING.group)};
   border-radius: 14px;
   background-color: ${theme.semantic.background.normal.alternative};
   border: 1px solid ${theme.semantic.line.solid.normal};

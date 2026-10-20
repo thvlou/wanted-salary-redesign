@@ -72,7 +72,7 @@ export function GlobalNav() {
           </IconButton>
           <AvatarButton aria-label="내 프로필">
             <Avatar size="small" sx={avatarStyle}>
-              영준
+              이티드
             </Avatar>
           </AvatarButton>
           <Button size="small" variant="outlined" color="assistive">

@@ -31,6 +31,7 @@ import {
   sectionContainerStyle,
   sectionSpacingStyle,
 } from "./shared.style";
+import { SPACING, px } from "@/styles/spacing";
 
 import type { CareerLevel, RecommendedPosition } from "@/data/salary";
 
@@ -81,14 +82,22 @@ export function UpgradePositionsSection({
       </Typography>
 
       {/* 현재 추천에 적용된 조건을 보여주는 context label. 조작 가능한 필터가 아니다. */}
-      <Box sx={{ marginTop: "10px" }}>
+      <Box sx={{ marginTop: px(SPACING.tight) }}>
         <ContentBadge color="neutral" size="small" variant="outlined">
           {careerPhrase(level)} · {jobName}
         </ContentBadge>
       </Box>
 
-      <FlexBox gap="24px" sx={[positionsBodyStyle, { marginTop: "20px" }]}>
-        <FlexBox flexDirection="column" gap="8px" sx={criteriaColumnStyle}>
+      {/* 제목+배지를 한 헤더 묶음으로 보고, 그 아래 본문까지 titleToContent 를 둔다. */}
+      <FlexBox
+        gap={px(SPACING.block)}
+        sx={[positionsBodyStyle, { marginTop: px(SPACING.titleToContent) }]}
+      >
+        <FlexBox
+          flexDirection="column"
+          gap={px(SPACING.tight)}
+          sx={criteriaColumnStyle}
+        >
           <FlexBox alignItems="center" gap="4px">
             <Typography variant="label1" weight="bold">
               추천 기준
@@ -118,7 +127,7 @@ export function UpgradePositionsSection({
               확인해보세요.
             </Typography>
           ) : (
-            <Grid spacing={16}>
+            <Grid spacing={SPACING.group}>
               {visible.map((position) => (
                 /* 모바일 1열 → sm 2열 → md 이상 3열 */
                 <GridItem
@@ -227,7 +236,7 @@ export function UpgradePositionsSection({
       </FlexBox>
 
       {canExpand && (
-        <FlexBox justifyContent="center" sx={{ marginTop: "28px" }}>
+        <FlexBox justifyContent="center" sx={{ marginTop: px(SPACING.block) }}>
           <Button
             variant="outlined"
             color="assistive"

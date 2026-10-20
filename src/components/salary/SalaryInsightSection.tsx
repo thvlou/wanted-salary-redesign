@@ -17,6 +17,7 @@ import {
   insightTiersStyle,
 } from "./SalaryInsightSection.style";
 import { sectionContainerStyle, sectionSpacingStyle } from "./shared.style";
+import { SPACING, px } from "@/styles/spacing";
 
 import type { CareerLevel, SalaryPoint } from "@/data/salary";
 
@@ -56,7 +57,11 @@ export function SalaryInsightSection({
   return (
     <Box as="section" sx={[sectionContainerStyle, sectionSpacingStyle]}>
       <FlexBox sx={insightSurfaceStyle}>
-        <FlexBox flexDirection="column" gap="6px" sx={insightLeadStyle}>
+        <FlexBox
+          flexDirection="column"
+          gap={px(SPACING.tight)}
+          sx={insightLeadStyle}
+        >
           {/* 다른 섹션 제목(title3)과 위계를 맞춘다. */}
           <Typography as="h2" variant="title3" weight="bold">
             연봉 인사이트

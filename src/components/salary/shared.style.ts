@@ -1,5 +1,7 @@
 import { css } from "@wanteddev/wds";
 
+import { SPACING, px } from "@/styles/spacing";
+
 import type { Theme } from "@wanteddev/wds";
 
 export const PAGE_MAX_WIDTH = 1120;
@@ -14,7 +16,7 @@ export const sectionContainerStyle = css`
 
 /** 섹션 사이 세로 리듬. 카드 대신 여백으로 섹션을 구분한다. */
 export const sectionSpacingStyle = css`
-  margin-top: 56px;
+  margin-top: ${px(SPACING.section)};
 `;
 
 /** 정보를 담는 옅은 면. 장식 효과 없이 fill 토큰만 사용한다. */

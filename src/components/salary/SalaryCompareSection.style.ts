@@ -1,5 +1,7 @@
 import { css } from "@wanteddev/wds";
 
+import { SPACING, px } from "@/styles/spacing";
+
 import type { Theme } from "@wanteddev/wds";
 
 /**
@@ -10,8 +12,8 @@ import type { Theme } from "@wanteddev/wds";
 export const compareBodyStyle = css`
   display: grid;
   grid-template-columns: minmax(0, 6fr) minmax(0, 4fr);
-  column-gap: 40px;
-  row-gap: 32px;
+  column-gap: ${px(SPACING.columnGutter)};
+  row-gap: ${px(SPACING.majorBlock)};
   align-items: start;
 
   @media (max-width: 991px) {
